@@ -1,0 +1,111 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #f5c518 !important;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f5c518;
+}
+
+.card {
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.jumbotron {
+    background: url('https://images.unsplash.com/photo-1517649763962-0c623066013b') center/cover no-repeat;
+    color: white;
+    padding: 120px 40px;
+    text-shadow: 2px 2px 10px black;
+    border-radius: 0;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f5c518;
+}
+
+.btn-gold {
+    background-color: #f5c518;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.carousel-indicators li {
+    background-color: #f5c518;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #000 !important;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .footer {
+    background-color: #000;
+}
+
+body.dark-mode .section-title {
+    color: #f5c518;
+}
+
+.cart-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+body.dark-mode .cart-section {
+    background-color: #1e1e1e;
+}
+
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cart-remove-btn {
+    border: none;
+    background: transparent;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
