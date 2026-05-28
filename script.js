@@ -4,6 +4,17 @@ function toggleDarkMode() {
 
 let cart = [];
 
+function loadCart() {
+    let saved = localStorage.getItem("cart");
+    if (saved) {
+        cart = JSON.parse(saved);
+    }
+}
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 function addToCart() {
     let select = document.getElementById("item");
     let name = select.options[select.selectedIndex].text;
@@ -22,11 +33,13 @@ function addToCart() {
         cart.push({ name: name, price: price, qty: qty });
     }
 
+    saveCart();
     updateCartUI();
 }
 
 function removeFromCart(index) {
     cart.splice(index, 1);
+    saveCart();
     updateCartUI();
 }
 
@@ -137,7 +150,10 @@ function placeOrder() {
 
     document.getElementById("orderMessage").innerHTML = "Thank you for your order!";
     cart = [];
+    saveCart();
     updateCartUI();
 }
 
+loadCart();
+updateCartUI();
 loadCheckout();
